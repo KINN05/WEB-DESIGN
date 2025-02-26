@@ -4,81 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(218, 238, 255);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100;
+        }
+        .container {
+            width: 100%;
+            max-width: 615px;
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+        }
+        .title {
+            font-size: 15px;
+            font-style: italic;
+            color: #333;
+        }
+        .subtitle {
+            background-color: #002054;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            padding: 8px 17px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+        }
+        .form-label {
+            width: 150px;
+            font-weight: 500;
+            padding-top: 8px;
+        }
+        .form-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+        .form-input:focus {
+            border-color: #1a3e78;
+        }
+        .section-title {
+            background-color: #002054;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            padding: 13px 20px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin: 5px -16px 5px;
+        }
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+        .checkbox-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .checkbox-note {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 11px;
+        }
+        .checkbox-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .radio-group {
+            margin-bottom: 20px;
+        }
+        .radio-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+        .submit-btn {
+            background-color: #002054;
+            color: white;
+            font-size: small;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #002054;
+        }
+    </style>
 </head>
 <body>
-    <P>Tanggal__________________________________________________________<b>Biodata Siswa</b></P>
-    <B>FROM KUNJUNGAN LP3I BANDA ACEH KE SEKOLAH (LP3I GOES TO SCHOOL)</B>
-    <form>
-        <table>
-            <tr>
-                <td>Nama Siswa</td>
-                <td><input type="text" maxlength="50" size="20" required></td>
-            </tr>
-            <tr>
-                <td>Tempat, Tgl Lahir</td>
-                <td><input type="text" size="20" required> <td><input type="date"></td></td>
-            </tr>
-            <tr>
-                <td>Asal Sekolah</td>
-                <td><input type="text" maxlength="50" size="20" required></td>
-            </tr>
-            <tr>
-                <td>Kelas</td>
-                <td><input type="number" required></td>
-            </tr>
-            <tr>
-                <td>No HP/WA</td>
-                <td><input type="number" maxlength="50" size="20" required></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="text" maxlength="50" size="20" required></td>
-            </tr>
-            <tr>
-                <td>Nama Presenter</td>
-                <td><input type="text" maxlength="50" size="20" required></td>
-            </tr>
-            <tr>
-                <td>No HP Presenter</td>
-                <td><input type="number" maxlength="50" size="20" required></td>
-            </tr>
-        </table>
-        <br>
+    <div class="container">
+        <div class="header">
+            <div class="title">Tanggal : <span id="current-date"></span></div>
+            <div class="subtitle">Biodata Siswa</div>
+        </div>
+
+        <h4>FORM KUNJUNGAN LP3I BANDA ACEH KE SEKOLAH (LP3I GOES TO SCHOOL)</h4>
+
+        <form id="visit-form">
+            <div class="form-group">
+                <label class="form-label">Nama Siswa</label>
+                <input type="text" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Tempat, Tgl Lahir</label>
+                <input type="text" class="form-input" required><input type="date" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Asal Sekolah</label>
+                <input type="text" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Kelas</label>
+                <input type="text" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">No HP/WA</label>
+                <input type="number" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Nama Presenter</label>
+                <input type="text" class="form-input">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">No HP Presenter</label>
+                <input type="number" class="form-input">
+            </div>
+            
+            <div class="checkbox-note">
+                Ket: ☐ boleh memilih lebih dari satu | ◯ pilih salah satu
+            </div>
+
         <fieldset>
-            <legend>Kuesioner Singkat</legend>
-            <legend><b>1. Media sosial apa yang kamu gunakan?</b></legend>
-            <p><input type="checkbox" id="1"> <label for="1">Instagram</label>
-                <input type="checkbox" id="2"><label for="2">Tiktok</label>
-                <input type="checkbox" id="3"><label for="3">Facebook</label>
-                <input type="checkbox" id="4"><label for="4">Twitter</label>
-                <input type="checkbox" id="5"><label for="5">Youtube</label>
-                <input type="checkbox"> <input type="text" placeholder="Lainnya__________">
-            </p>
-            <tr>
-                <td><b>2. Dalam Sehari, berapa lama kamu habiskan untuk bermedia sosial?</b></td>
-                <p><td>
-                    <input type="radio" name="point 2" id="<1J"><label for="<1J"> < 1 Jam</label>
-                    <input type="radio" name="point 2" id="1-3J"><label for="1-3J">1-3 Jam</label>
-                    <input type="radio" name="point 2" id="3-5J"><label for="3-5J">3-5 Jam</label>
-                    <input type="radio" name="point 2" id=">5J"><label for=">5J"> > 5 Jam</label>
-                </td></p>
-            </tr>
-            <tr>
-                <td><b>3. Media sosial apa yang paling sering kamu gunakan?</b></td>
-                <p><td>
-                    <input type="radio" name="point 3" id="IG"><label for="IG">Instagram</label>
-                    <input type="radio" name="point 3" id="TT"><label for="TT">Tiktok</label>
-                    <input type="radio" name="point 3" id="FB"><label for="FB">Facebook</label>
-                    <input type="radio" name="point 3" id="TW"><label for="TW">Twitter</label>
-                    <input type="radio" name="point 3" id="YT"><label for="YT">Youtube</label>
-                    <input type="radio"> <input type="text" placeholder="Lainnya__________">
-                </td></p>
-            </tr>
+            <legend><div class="section-title">Kuesioner Singkat</div></legend>
+
+            <div class="checkbox-group">
+                <label class="checkbox-label">1. Media sosial apa yang kamu gunakan?</label>
+                <div class="checkbox-options">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="instagram" name="social_media" required>
+                        <label for="instagram">Instagram</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tiktok" name="social_media">
+                        <label for="tiktok">TikTok</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="facebook" name="social_media">
+                        <label for="facebook">Facebook</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="twitter" name="social_media">
+                        <label for="twitter">Twitter</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="youtube" name="social_media">
+                        <label for="youtube">Youtube</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="other" name="social_media">
+                        <label for="other"><input type="text" placeholder="Lainnya________________"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="radio-group">
+                <label class="checkbox-label">2. Dalam sehari, berapa lama kamu habiskan untuk bermedia sosial?</label>
+                <div class="radio-options">
+                    <div class="radio-option">
+                        <input type="radio" id="time1" name="social_media_time" required>
+                        <label for="time1">< 1 Jam</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="time2" name="social_media_time">
+                        <label for="time2">1-3 Jam</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="time3" name="social_media_time">
+                        <label for="time3">3-5 Jam</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="time4" name="social_media_time">
+                        <label for="time4">>5 Jam</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="radio-group">
+                <label class="checkbox-label">3. Media sosial apa yang paling sering kamu gunakan?</label>
+                <div class="radio-options">
+                    <div class="radio-option">
+                        <input type="radio" id="most_instagram" name="most_used_social_media" required>
+                        <label for="most_instagram">Instagram</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="most_tiktok" name="most_used_social_media">
+                        <label for="most_tiktok">TikTok</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="most_facebook" name="most_used_social_media">
+                        <label for="most_facebook">Facebook</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="most_twitter" name="most_used_social_media">
+                        <label for="most_twitter">Twitter</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="most_youtube" name="most_used_social_media">
+                        <label for="most_youtube">Youtube</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="most_other" name="most_used_social_media">
+                        <label for="most_other"><input type="text" placeholder="Lainnya________________"></label>
+                    </div>
+                </div>
+            </div>
         </fieldset>
-        <tr>
-            <td></td>
-            <td><button type="submit">Proses</button> <button type="reset">Kosongkan From</button></td>
-        </tr>
-    </form>
+            <button type="submit" class="submit-btn">KIRIM</button><button type="reset" class="submit-btn">Kosongkan From</button>
+        </form>
+    </div>
+    <script>
+        // Set current date
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = today.toLocaleDateString('id-ID', options);
+        
+        // Form submission
+        document.getElementById('visit-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form berhasil dikirim!');
+        });
+    </script>
 </body>
-</html> 
+</html>
