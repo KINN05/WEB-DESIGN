@@ -9,21 +9,168 @@
 <body>
 
     <div class="container">
+        <span class="text-center"><h4><strong>FORM KUNJUNGAN LP3I BANDA ACEH KE SEKOLAH (GOES TO SCHOOL)</strong></h4></span>
+        <div class="title">Tanggal : <strong><span id="current-date"></span></strong></div>
+        
 
         <div class="row">
             <div class="card">
                 <div class="card-body">
-                    <span class="text-center"><h4>FORM KUNJUNGAN LP3I BANDA ACEH KE SEKOLAH (LP3I GOES TO SCHOOL)</h4></span>
-                    
                     <form action="">
-                        <label for="nama">Tanggal Lahir</label>
+                        <p class="text-center fs-4"><strong>BIODATA</strong></p>
+                        <label for="nama">Nama Siswa</label>
+                        <div class="input-group">
+                            <span class="input-group-text">First and last name</span>
+                            <input type="text" aria-label="First name" class="form-control" id="nama" placeholder="First Name" required>
+                            <input type="text" aria-label="Last name" class="form-control" id="nama" placeholder="Last Name">
+                          </div>
+
+                        <label for="tempat lahir">Tempat Lahir</label>
+                        <input type="text" class="form-control" id="tempat lahir" placeholder=".........." required>
+                        
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="tanggal">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="tanggal" required>
+                            </div>
+                            <div class="col-2">
+                                <label for="jk">Jenis Kelamin</label>
+                                <input type="text" class="form-control" id="jk" placeholder="Laki-Laki/Perempuan">
+                            </div>
+                        </div>
+                        
+                        <label for="asal">Asal Sekolah</label>
+                        <input type="text" class="form-control" id="asal" placeholder=".........." required>
+
+                        <label for="kelas">Kelas</label>
+                        <input type="text" class="form-control" id="kelas" placeholder=".........." required>
+                        
+                        <label for="noHP">No HP/WA</label>
+                        <input type="number" class="form-control" id="asal" placeholder="+62......." required>
+                        
+                        <label for="email">Email</label>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Recipient's Email" aria-label="Recipient's Email" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2" required>@example.com/co.id</span>
+                        </div>
+
+                        <label for="namaPresenter">Nama Presenter</label>
+                        <input type="text" class="form-control" id="asal" placeholder="..........">
+
+                        <label for="noPresenter">No HP Presenter</label>
+                        <input type="number" class="form-control" id="asal" placeholder="+62.......">
+                        
+                        <br>
+
+                        <div class="text-nowrap bg-body-secondary border" style="width: 22rem;">
+                            <small class="form-text text-muted">Ket: ☐ Boleh memilih lebih dari satu | ◯ Pilih salah satu</small>
+                        </div>
+
+                        <br>
+                        <div class="d-inline p-2 text-bg-success fs-5"><strong>Kuesioner Singkat</strong></div>
+                        <br>
+
+                    <br><div class="form-section">
+                        <div class="form-group">
+                            <label for="mediaSosial">1. Media sosial apa yang kamu gunakan?</label><br>
+                            <input class="form-check-input" type="checkbox" value="Instagram" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Instagram
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="Tiktok" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Tiktok
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="Facebook" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Facebook
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="Twiter" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Twiter
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="Youtube" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Youtube
+                            </label>
+                            <input class="form-check-input" type="checkbox" value="Lainnya" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"><input type="text" placeholder="Lainnya________________">
+                                
+                            </label>
+                        </div>
+    
+                        <br>
+    
+                        <div class="form-group">
+                            <label for="lamaMediaSosial">2. Dalam sehari, berapa lama kamu habiskan untuk bermedia sosial?</label><br>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                < 1 Jam
+                            </label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                1-3 Jam
+                            </label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                3-5 Jam
+                            </label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                            <label class="form-check-label" for="flexRadioDefault4">
+                                > 5 Jam
+                            </label>
+                        </div>
+    
+                        <br>
+    
+                        <div class="form-group">
+                            <label for="mediaSosialFavorit">3. Media sosial apa yang paling sering kamu gunakan?</label><br>
+                            <input class="form-check-input" type="radio" name="Instagram" id="instagram">
+                            <label class="form-check-label" for="Instagram">
+                                Instagram
+                            </label>
+                            <input class="form-check-input" type="radio" name="Tiktok" id="TikTok">
+                            <label class="form-check-label" for="TikTok">
+                                Tiktok
+                            </label>
+                            <input class="form-check-input" type="radio" name="Facebook" id="Facebook">
+                            <label class="form-check-label" for="Facebook">
+                                Facebook
+                            </label>
+                            <input class="form-check-input" type="radio" name="Twitter" id="Twitter">
+                            <label class="form-check-label" for="Twitter">
+                                Twiter
+                            </label>
+                            <input class="form-check-input" type="radio" name="Youtube" id="Youtube">
+                            <label class="form-check-label" for="Youtube">
+                                Youtube
+                            </label>
+                            <input class="form-check-input" type="radio" name="Lainnya" id="Lainnya">
+                            <label class="form-check-label" for="Lainnya"><input type="text" placeholder="Lainnya________________">
+                            
+                            </label>
+                        </div>
+                    </div>  
+
+                    <br>
+
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                    
                     </form>
+
+
                 </div>
             </div>
         </div>
     </div>
 
-    
+    <script>
+        // Set current date
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = today.toLocaleDateString('id-ID', options);
+        
+    </script>
 
 
 </body>
