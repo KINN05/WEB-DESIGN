@@ -1,0 +1,128 @@
+/* warna */
+body{
+    margin: 0;
+    background-color: #f8f9fa;
+}
+.container-fluid {
+    background-color: #f8f9fa;
+    padding: 0;
+}
+
+/* Testimony */
+
+#cardTestimony1 .card-img-top{
+    width: 65%;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+.card{
+    padding: 1em .5em .5em;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.card-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.btn-primary {
+    border-radius: 2em;
+    padding: .5em 1.5em;
+}
+
+/* cara kerja */
+
+.steps-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+        
+.step-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #6c757d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+        
+.step-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(100vw / 4 - 150px);
+    height: 2px;
+    background-color: #dee2e6;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+        
+.col:last-child .step-circle::after {
+    display: none;
+}
+        
+.step-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+        
+.step-description {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+        
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+        
+.step-item {
+    text-align: center;
+    padding: 0 1rem;
+}
+        
+        /* Responsive adjustments
+@media (max-width: 768px) {
+.step-circle::after {
+    display: none;
+}
+            
+.step-circle {
+    margin-bottom: 1rem;
+}
+            
+.section-title {
+    font-size: 2rem;
+}
+            
+.step-item {
+    margin-bottom: 3rem;
+}
+}
+        
+@media (min-width: 992px) {
+.step-circle::after {
+    width: calc(25vw - 100px);
+}
+}
+        
+@media (min-width: 1200px) {
+.step-circle::after {
+    width: calc(20vw - 50px);
+}
+} */
+
+
