@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Tes UAS/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <!-- <h3>Belajar JavaScript</h3>
+    <span id="nama"></span><br>
+    <span id="umur"></span> -->
+
+    <div class="row">
+        <div class="col-6 m-auto mt-5">
+            <div id="pesan" class="alert alert-success" role="alert">
+                
+            </div>
+            <div class="card">
+                <div class="card-header">Featured</div>
+
+                <div class="card-body">
+                    <form id="loginFrom">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log("Halo")
+
+        let sapa;
+        sapa = "Selamat Malam";
+        sapa = prompt("Masukkan Sapaan");
+        console.log(sapa);
+
+            // //teks
+        let nilai1, nilai2, hasil;
+        nilai1 = prompt("Masukkan NIlai 1");
+        nilai2 = prompt("Masukkan Nilai 2");
+        hasil = nilai1*nilai2;
+
+        console.log(hasil);
+
+            //untuk yang bisa di jumlah memakai +
+            //bisa juga memakai teks
+        let nilai1, nilai2, hasil;
+        nilai1 = Number(prompt("Masukkan NIlai 1"));
+        nilai2 = Number(prompt("Masukkan Nilai 2"));
+        hasil = nilai1+nilai2;
+
+        console.log(hasil);
+
+            //if
+        let sapa;
+        sapa = prompt("Masukkan Nama");
+
+        if(sapa == "busi"){
+            console.log("Selamat Datang Budi");
+        }else if(sapa == "siti"){
+            console.log("Selamat Datag Siti");
+        }
+
+            //katagori umur
+        let nama, umur;
+        nama = prompt("Masukkan Nama");
+        umur = Number(prompt("Masukkan Umur"));
+
+            //consol log utuk di tampilkan di console di web bagian inspect
+        console.log("Hai, "+ nama);
+        document.getElementById("nama").innerHTML ="Hai, "+ nama;
+
+        if(umur <=5){
+            console.log("Anda Masih Balita");
+            document.getElementById("umur").innerHTML ="Anda Masih Balita";
+        }else if(umur <=12){
+            console.log("Anda Masih Anak-Anak");
+            document.getElementById("umur").innerHTML ="Anda Masih Anak-Anak";
+        }else if(umur <=17){
+            console.log("Anda Masih Remaja");
+            document.getElementById("umur").innerHTML ="Anda Masih Remaja";
+        }else if(umur <=50){
+            console.log("Anda Sudah Dewasa");
+            document.getElementById("umur").innerHTML ="Anda Sudah Dewasa";
+        }else{
+            console.log("Anda Sudah Lansia");
+            document.getElementById("umur").innerHTML ="Anda Sudah Lansia";
+        }
+
+
+    </script>
+
+    <script src="../Tes UAS/js/bootstrap.min.js"></script>
+    <script>document.getElementById("loginFrom").addEventListener('submit', function (event){
+        event.preventDefault();
+        let uname = document.getElementById('exampleInputEmail1').value;
+        let pass = document.getElementById('exampleInputPassword1').value;
+
+        console.log(uname);
+        console.log(pass);
+
+        if(uname == "admin@gmail.com" && pass == "Admin123"){
+            //pesan benar
+            document.getElementById('pesan').innerHTML = "Pesan Berhasil";
+
+            //mengalihkan ke halaman lain
+            setTimeout(() => {
+                window.location.href = "dasar.html";   
+            }, 3000);
+        }else{
+            //pesan gagal
+            document.getElementById('pesan').innerHTML = "Pesan Gagal";
+        }
+            
+
+    });
+        
+    </script>
+</body>
+</html>

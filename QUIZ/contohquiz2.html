@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="" id="kalkulator">
+        Berat :
+        <input type="number" id="berat">
+        <br>
+        <br>
+        Aktifitas :
+        <select id="aktivitas">
+            <option value="1.2">Sedentari (minim aktivitas)</option>
+            <option value="1.375">Ringan (olahraga 1-3 hari/minggu)</option>
+            <option value="1.55" selected>Moderat (olahraga 3-5 hari/minggu)</option>
+            <option value="1.725">Aktif (olahraga 6-7 hari/minggu)</option>
+            <option value="1.9">Sangat Aktif (olahraga berat setiap hari)</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">PROSES</button>
+    </form>
+    <hr>
+    <h1 id="ml"></h1>
+    <h4 id="gelas"></h4> -->
+
+    <form action="" id="kalkulator">
+        Berat : 
+        <input type="number" id="berat">
+        <br>
+        <br>
+        Aktivitas :
+        <select id="aktivitas">
+            <option value="1.2">Sedentari (minim aktivitas)</option>
+            <option value="1.375">Ringan (olahraga 1-3 hari/minggu)</option>
+            <option value="1.55" selected>Moderat (olahraga 3-5 hari/minggu)</option>
+            <option value="1.725">Aktif (olahraga 6-7 hari/minggu)</option>
+            <option value="1.9">Sangat Aktif (olahraga berat setiap hari)</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">PROSES</button>
+    </form>
+    <hr>
+    <h1 id="ml"></h1>
+    <h4 id="gelas"></h4>
+
+    <!-- <script>
+        document.getElementById('kalkuator').addEventListener('submit',function (event) {
+            event.preventDefault();
+
+            // 1. mengambil isi dari input
+            let wight = document.getElementById('berat').value;
+            let activity = document.getElementById('aktifitas').value;
+
+            // 2. memproses jumlah ml dan jumlah gelas
+            let kebutuhanAir = wight * activity * 30;
+            let gelas = kebutuhanAir /250;
+
+            // 3. menampilkan kembali hasil prosesnya ke html
+            document.getElementById('ml').innerHTML = kebutuhanAir.toFixed(0)+"ml";
+            document.getElementById('gelas').innerHTML = "setara dengan"+gelas.toFixed(0)+"gelas";
+
+        });
+    </script> -->
+
+    <script>
+        document.getElementById('kalkulator').addEventListener('submit', function(e){
+            e.preventDefault();
+           
+            // 1. ambil isi dari input
+            let weight = document.getElementById('berat').value;
+            let activity = document.getElementById('aktivitas').value;
+
+            // 2. memproses jumlah ml dan jumlah gelas 
+            let kebutuhanAir = weight * activity * 30;
+            let gelas = kebutuhanAir / 250;
+
+            // 3. menampilkan kembali hasil proses ke html
+            document.getElementById('ml').innerHTML = kebutuhanAir.toFixed(0);
+            document.getElementById('gelas').innerHTML = "setara gelas" + gelas.toFixed(0)+" gelas";
+
+
+        });
+      
+    </script>
+</body>
+</html>
